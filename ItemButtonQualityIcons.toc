@@ -1,0 +1,15 @@
+## Interface: 100207
+## Title: Item Button Quality Icons
+## Notes: ItemButtonQualityIcons
+## Author: Luna
+## Version: 0.1
+## DefaultState: enabled
+## SavedVariables: ItemButtonQualityIconsDB
+## Dependencies: ItemUpgradeQualityIcons
+## X-Curse-Project-ID: 1027248
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+main.lua
