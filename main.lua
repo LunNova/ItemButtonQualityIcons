@@ -27,6 +27,17 @@ assignRange(10951, 10964, AWAKENED) -- 14/14
 assignRange(10249, 10249, AWAKENED_CRAFTED) -- awakened crafted
 -- FIXME: figure out how to determine which crest type was used with a crafted item
 
+-- The War Within S4 bonus IDs
+-- These ones count backwards for some reason.
+assignRange(10297, 10290, ADVENTURER) -- 571-593
+assignRange(10273, 10266, CHAMPION) -- 597-619
+assignRange(10289, 10282, EXPLORER) -- 558-580
+assignRange(10265, 10256, HERO) -- 610-626
+assignRange(10260, 10299, MYTH) -- 623-639
+assignRange(10281, 10274, VETERAN) -- 584-610
+-- Awakened: Not in raidbots export as of 20240913
+
+
 local categoryEnum = {
 	Explorer = "Explorer",
 	Adventurer = "Adventurer",
