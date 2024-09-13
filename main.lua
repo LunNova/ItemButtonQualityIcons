@@ -15,16 +15,16 @@ end
 
 -- https://www.raidbots.com/static/data/live/bonuses.json
 -- Dragonflight S4 bonus IDs
-assignRange(10305, 10312, ADVENTURER)
-assignRange(10313, 10320, CHAMPION)
-assignRange(10321, 10328, EXPLORER)
-assignRange(10329, 10334, HERO)
-assignRange(10335, 10338, MYTH)
-assignRange(10341, 10348, VETERAN)
-assignRange(10407, 10418, AWAKENED) -- 12/12
-assignRange(10490, 10503, AWAKENED) -- 14/14
-assignRange(10951, 10964, AWAKENED) -- 14/14
-assignRange(10249, 10249, AWAKENED_CRAFTED) -- awakened crafted
+-- assignRange(10305, 10312, ADVENTURER)
+-- assignRange(10313, 10320, CHAMPION)
+-- assignRange(10321, 10328, EXPLORER)
+-- assignRange(10329, 10334, HERO)
+-- assignRange(10335, 10338, MYTH)
+-- assignRange(10341, 10348, VETERAN)
+-- assignRange(10407, 10418, AWAKENED) -- 12/12
+-- assignRange(10490, 10503, AWAKENED) -- 14/14
+-- assignRange(10951, 10964, AWAKENED) -- 14/14
+-- assignRange(10249, 10249, AWAKENED_CRAFTED) -- awakened crafted
 -- FIXME: figure out how to determine which crest type was used with a crafted item
 
 -- The War Within S4 bonus IDs
@@ -33,7 +33,8 @@ assignRange(10297, 10290, ADVENTURER) -- 571-593
 assignRange(10273, 10266, CHAMPION) -- 597-619
 assignRange(10289, 10282, EXPLORER) -- 558-580
 assignRange(10265, 10256, HERO) -- 610-626
-assignRange(10260, 10299, MYTH) -- 623-639
+assignRange(10257, 10260, MYTH) -- 623-639  //  10260 (623), 10259 (626), 10258 (629), 10257 (632), 10298 (636), 10299 (639)
+assignRange(10298, 10299, MYTH) -- split up, big range
 assignRange(10281, 10274, VETERAN) -- 584-606
 -- Awakened: Not in raidbots export as of 20240913
 
