@@ -15,17 +15,28 @@ end
 
 -- https://www.raidbots.com/static/data/live/bonuses.json
 -- Dragonflight S4 bonus IDs
-assignRange(10305, 10312, ADVENTURER)
-assignRange(10313, 10320, CHAMPION)
-assignRange(10321, 10328, EXPLORER)
-assignRange(10329, 10334, HERO)
-assignRange(10335, 10338, MYTH)
-assignRange(10341, 10348, VETERAN)
-assignRange(10407, 10418, AWAKENED) -- 12/12
-assignRange(10490, 10503, AWAKENED) -- 14/14
-assignRange(10951, 10964, AWAKENED) -- 14/14
-assignRange(10249, 10249, AWAKENED_CRAFTED) -- awakened crafted
+-- assignRange(10305, 10312, ADVENTURER)
+-- assignRange(10313, 10320, CHAMPION)
+-- assignRange(10321, 10328, EXPLORER)
+-- assignRange(10329, 10334, HERO)
+-- assignRange(10335, 10338, MYTH)
+-- assignRange(10341, 10348, VETERAN)
+-- assignRange(10407, 10418, AWAKENED) -- 12/12
+-- assignRange(10490, 10503, AWAKENED) -- 14/14
+-- assignRange(10951, 10964, AWAKENED) -- 14/14
+-- assignRange(10249, 10249, AWAKENED_CRAFTED) -- awakened crafted
 -- FIXME: figure out how to determine which crest type was used with a crafted item
+
+-- The War Within S4 bonus IDs
+assignRange(10290, 10297, ADVENTURER) -- 571-593
+assignRange(10266, 10273, CHAMPION) -- 597-619
+assignRange(10282, 10289, EXPLORER) -- 558-580
+assignRange(10256, 10265, HERO) -- 610-626
+assignRange(10257, 10260, MYTH) -- 623-639  //  10260 (623), 10259 (626), 10258 (629), 10257 (632), 10298 (636), 10299 (639)
+assignRange(10298, 10299, MYTH) -- split up, big range
+assignRange(10274, 10281, VETERAN) -- 584-606
+-- Awakened: Not in raidbots export as of 20240913
+
 
 local categoryEnum = {
 	Explorer = "Explorer",
@@ -43,63 +54,63 @@ local categoryEnum = {
 -- TODO: can it share data from that addon? it's in locals right now so I think it can't
 local categoryDataTab = {
 	[categoryEnum.Explorer] = {
-		minLevel = 454,
-		maxLevel = 476,
+		minLevel = 558,
+		maxLevel = 580,
 		color = ITEM_POOR_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier1:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:31:73:107|t ",
 	},
 	[categoryEnum.Adventurer] = {
-		minLevel = 467,
-		maxLevel = 489,
+		minLevel = 571,
+		maxLevel = 593,
 		color = WHITE_FONT_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier2:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:47:1:35|t ",
 	},
 	[categoryEnum.Veteran] = {
-		minLevel = 480,
-		maxLevel = 502,
+		minLevel = 584,
+		maxLevel = 606,
 		color = UNCOMMON_GREEN_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier3:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:49:85:1:35|t ",
 	},
 	[categoryEnum.Champion] = {
-		minLevel = 493,
-		maxLevel = 515,
+		minLevel = 597,
+		maxLevel = 619,
 		color = RARE_BLUE_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier4:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:87:121:1:35|t ",
 	},
 	[categoryEnum.Hero] = {
-		minLevel = 506,
-		maxLevel = 522,
+		minLevel = 610,
+		maxLevel = 626,
 		color = ITEM_EPIC_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier5:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:35:37:71|t ",
 	},
 	[categoryEnum.Myth] = {
-		minLevel = 519,
-		maxLevel = 528,
+		minLevel = 623,
+		maxLevel = 639,
 		color = ITEM_LEGENDARY_COLOR,
 		icon = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons:20:20:0:0:128:128:86:122:42:78|t ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons:20:20:0:0:128:128:42:78:42:78|t ",
 	},
-	[categoryEnum.Awakened] = {
-		minLevel = 493,
-		maxLevel = 528,
-		upgradeLevelBeeg = 14,
-		maxLevelBeeg = 535,
-		color = ITEM_LEGENDARY_COLOR,
-		icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-		iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-	},
-	[categoryEnum.Awakened_Crafted] = {
-		minLevel = 489,
-		maxLevel = 525,
-		color = ITEM_LEGENDARY_COLOR,
-		icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-		iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-	},
+	-- [categoryEnum.Awakened] = {
+	-- 	minLevel = 493,
+	-- 	maxLevel = 528,
+	-- 	upgradeLevelBeeg = 14,
+	-- 	maxLevelBeeg = 535,
+	-- 	color = ITEM_LEGENDARY_COLOR,
+	-- 	icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- 	iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- },
+	-- [categoryEnum.Awakened_Crafted] = {
+	-- 	minLevel = 489,
+	-- 	maxLevel = 525,
+	-- 	color = ITEM_LEGENDARY_COLOR,
+	-- 	icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- 	iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- },
 }
 
 local categoryDataByIdx = {

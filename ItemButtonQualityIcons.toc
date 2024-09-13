@@ -1,8 +1,8 @@
-## Interface: 100207
+## Interface: 110002
 ## Title: Item Button Quality Icons
 ## Notes: ItemButtonQualityIcons
 ## Author: Luna
-## Version: 0.1
+## Version: 0.2
 ## DefaultState: enabled
 ## SavedVariables: ItemButtonQualityIconsDB
 ## Dependencies: ItemUpgradeQualityIcons
