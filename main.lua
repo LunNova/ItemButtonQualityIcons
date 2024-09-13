@@ -34,7 +34,7 @@ assignRange(10273, 10266, CHAMPION) -- 597-619
 assignRange(10289, 10282, EXPLORER) -- 558-580
 assignRange(10265, 10256, HERO) -- 610-626
 assignRange(10260, 10299, MYTH) -- 623-639
-assignRange(10281, 10274, VETERAN) -- 584-610
+assignRange(10281, 10274, VETERAN) -- 584-606
 -- Awakened: Not in raidbots export as of 20240913
 
 
@@ -54,63 +54,63 @@ local categoryEnum = {
 -- TODO: can it share data from that addon? it's in locals right now so I think it can't
 local categoryDataTab = {
 	[categoryEnum.Explorer] = {
-		minLevel = 454,
-		maxLevel = 476,
+		minLevel = 558,
+		maxLevel = 580,
 		color = ITEM_POOR_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier1:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:31:73:107|t ",
 	},
 	[categoryEnum.Adventurer] = {
-		minLevel = 467,
-		maxLevel = 489,
+		minLevel = 571,
+		maxLevel = 593,
 		color = WHITE_FONT_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier2:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:47:1:35|t ",
 	},
 	[categoryEnum.Veteran] = {
-		minLevel = 480,
-		maxLevel = 502,
+		minLevel = 584,
+		maxLevel = 606,
 		color = UNCOMMON_GREEN_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier3:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:49:85:1:35|t ",
 	},
 	[categoryEnum.Champion] = {
-		minLevel = 493,
-		maxLevel = 515,
+		minLevel = 597,
+		maxLevel = 619,
 		color = RARE_BLUE_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier4:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:87:121:1:35|t ",
 	},
 	[categoryEnum.Hero] = {
-		minLevel = 506,
-		maxLevel = 522,
+		minLevel = 610,
+		maxLevel = 626,
 		color = ITEM_EPIC_COLOR,
 		icon = "|A:Professions-ChatIcon-Quality-Tier5:20:20|a ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons.tga:20:20:0:0:128:128:1:35:37:71|t ",
 	},
 	[categoryEnum.Myth] = {
-		minLevel = 519,
-		maxLevel = 528,
+		minLevel = 623,
+		maxLevel = 639,
 		color = ITEM_LEGENDARY_COLOR,
 		icon = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons:20:20:0:0:128:128:86:122:42:78|t ",
 		iconObsolete = "|TInterface\\AddOns\\ItemUpgradeQualityIcons\\ProfessionsQualityIcons:20:20:0:0:128:128:42:78:42:78|t ",
 	},
-	[categoryEnum.Awakened] = {
-		minLevel = 493,
-		maxLevel = 528,
-		upgradeLevelBeeg = 14,
-		maxLevelBeeg = 535,
-		color = ITEM_LEGENDARY_COLOR,
-		icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-		iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-	},
-	[categoryEnum.Awakened_Crafted] = {
-		minLevel = 489,
-		maxLevel = 525,
-		color = ITEM_LEGENDARY_COLOR,
-		icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-		iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
-	},
+	-- [categoryEnum.Awakened] = {
+	-- 	minLevel = 493,
+	-- 	maxLevel = 528,
+	-- 	upgradeLevelBeeg = 14,
+	-- 	maxLevelBeeg = 535,
+	-- 	color = ITEM_LEGENDARY_COLOR,
+	-- 	icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- 	iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- },
+	-- [categoryEnum.Awakened_Crafted] = {
+	-- 	minLevel = 489,
+	-- 	maxLevel = 525,
+	-- 	color = ITEM_LEGENDARY_COLOR,
+	-- 	icon = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- 	iconObsolete = "|A:ui-ej-icon-empoweredraid-large:20:20|a ",
+	-- },
 }
 
 local categoryDataByIdx = {
