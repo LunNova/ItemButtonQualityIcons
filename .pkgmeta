@@ -5,6 +5,13 @@ required-dependencies:
 
 enable-nolib-creation: yes
 
+ignore:
+  - scripts
+  - '*.lock'
+  - '*.nix'
+  - '.git*'
+  - '.editorconfig'
+
 externals:
   Libs/LibStub:
     url: https://repos.wowace.com/wow/libstub/trunk
